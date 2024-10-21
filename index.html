@@ -1,0 +1,35 @@
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8"> 
+    <title>CodePen - Animated Login Form using Html &amp; CSS Only</title> 
+    <link rel="stylesheet" href="./style.css"> 
+ </head> 
+
+ <body>
+  <section>
+    <!--span-->
+  </section>
+
+  <script>
+    for (let i = 0; i < 550; i++) {
+     var section = document.querySelector('section');
+     var span = document.createElement('span');
+     section.appendChild(span);
+    }
+
+    function hover() {
+      const spans = document.querySelectorAll('span');
+      const randomIdx = Math.floor(Math.random() * spans.length);
+      const randomSpan = spans[randomIdx];
+
+      randomSpan.classList.add('hover');
+
+      setTimeout(() => {
+        randomSpan.classList.remove('hover');
+      }, 100);
+    }
+
+    setInterval(hover, 20);
+  </script>
+</body>
+</html>
