@@ -1,6 +1,8 @@
 <html lang="en">
   <head> 
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Permissions-Policy" content="clipboard-read=*, clipboard-write=*">
     <title>UNSTABLE 2</title> 
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +23,23 @@
   </div>
 
   <script>
+    const section = document.querySelector('section');
+
+    // Create a Document Fragment for batch adding spans
+    const fragment = document.createDocumentFragment();
+
     for (let i = 0; i < 650; i++) {
-     var section = document.querySelector('section');
-     var span = document.createElement('span');
-     section.appendChild(span);
+      const span = document.createElement('span');
+      fragment.appendChild(span);
     }
 
+    // Append all spans to the section at once
+    section.appendChild(fragment);
+
+    // Cache spans to avoid querying the DOM each time
+    const spans = document.querySelectorAll('span');
+
     function hover() {
-      const spans = document.querySelectorAll('span');
       const randomIdx = Math.floor(Math.random() * spans.length);
       const randomSpan = spans[randomIdx];
 
@@ -39,6 +50,7 @@
       }, 100);
     }
 
+    // Set an interval to trigger the hover effect
     setInterval(hover, 20);
   </script>
 </body>
