@@ -29,32 +29,29 @@ section span
   display: block;
   width: 3vw;
   height: 10vw;
-  background: #181818;
+  background: #101010;
   z-index: 2;
   transition: 2s;
   margin: 2px;
 }
-section span:hover 
-{
-  background: rgb(66, 147, 66);
-  transition: 0s;
-}
 
 .hover {
-  background: rgb(66, 147, 66);
+  /*background: rgb(104, 202, 104);*/
+  background: #7f7f7f;
   /*box-shadow: 0px 0px 10px 0px rgb(66, 147, 66);*/
   transition: 0s;
 }
 
-.view_points {
+main {
   display: inline-grid;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
+  position: inherit;
 }
 
 h1 {
   font-family: 'Gantari';
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 600;
   line-height: 30px;
   text-align: center;
@@ -64,9 +61,46 @@ h1 {
 
 .title {
   display: grid;
-  position: absolute;
+  position: initial;
   z-index: 10;
   width: 100%;
-  height: 20%;
   align-items: end;
+  min-height: 80px;
+  backdrop-filter: blur(2px);
+}
+
+header {
+  display: flex;
+  position: initial;
+  z-index: 10;
+  width: 100%;
+  align-items: center;
+  background: #000;
+  box-shadow: 0px 0px 10px 5px #000000;
+  padding: 10px 7%;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 500;
+  font-family: 'Gantari';
+}
+
+h3 {
+  color: #ffffff;
+  font-size: 17px;
+}
+
+p {
+  color: #f0f0f0;
+  font-size: 14px;
+}
+
+footer {
+  backdrop-filter: blur(1px);
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
 }
