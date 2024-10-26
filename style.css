@@ -65,12 +65,11 @@ h1 {
   z-index: 10;
   width: 100%;
   align-items: end;
-  min-height: 80px;
-  backdrop-filter: blur(2px);
+  min-height: 100px;
 }
 
 header {
-  display: flex;
+  display: none;
   position: initial;
   z-index: 10;
   width: 100%;
