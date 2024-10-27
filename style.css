@@ -65,7 +65,8 @@ h1 {
   z-index: 10;
   width: 100%;
   align-items: end;
-  min-height: 100px;
+  min-height: 150px;
+  gap: 20px;
 }
 
 header {
